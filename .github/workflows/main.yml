@@ -47,7 +47,7 @@ jobs:
 
       - name: Download and validate IPA
         run: |
-          wget "${{ inputs.ipa_url }}" --no-verbose -O ${{ github.workspace }}/facebook.ipa
+          curl -L -A "Mozilla/5.0" "${{ inputs.ipa_url }}" -o ${{ github.workspace }}/facebook.ipa
 
           file_type=$(file --mime-type -b ${{ github.workspace }}/facebook.ipa)
 
