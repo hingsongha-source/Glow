@@ -28,7 +28,7 @@ concurrency:
 
 jobs:
   build:
-    name: 
+    name: Build Glow
     runs-on: macos-15
     permissions:
       contents: write
